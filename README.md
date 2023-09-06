@@ -9,7 +9,7 @@
 
 ## :speech_balloon: Practicas: 
 
-### +Proyecto 1:
+###  <a name="general-info">Proyecto 1:</a>
 ### gdflkgkfdgkdfgklfdglkfd
 
 
