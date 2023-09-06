@@ -9,11 +9,11 @@
 
 ## :speech_balloon: Practicas: 
 
-### *  **Proyecto 1:**
+### -  **Proyecto 1:**
 ### gdflkgkfdgkdfgklfdglkfd
 
 
-## Proyecto 1: Trabajo Final:
+## :notes: Trabajo Final:
 
 
 
