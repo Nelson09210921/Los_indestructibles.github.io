@@ -4,7 +4,7 @@
 | Nelson Andres Barboza Landinez |
 | Garbiel Antonio Chavarro Avellaneda | 
 | Nery Karolina Aponte Barajas | 
-| row 2 | 
+| Carlos Alejandro Amaya Cepeda | 
 
 
 ## :speech_balloon: Practicas
