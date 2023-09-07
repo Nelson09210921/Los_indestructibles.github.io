@@ -9,7 +9,7 @@
 
 ## :speech_balloon: Practicas
 
-##   **Proyecto 1:**
+##   **Practica 1: Familiarizandonos con la Herramienta Nand2Tetris y reforzando logica booleana**
 El objetivo inicial del proyecto número 1 era generar las funciones necesarias para así dados una serie de datos de entrada se generará el comportamiento de las compuertas lógicas dadas (And, Or, Mux, etc.…). Para empezar, es necesario realizar el código de las compuertas más básicas, como lo son (And, Mux, Not, Or). Una vez realizadas estas funciones se proceden a usarse como base para el desarrollo de compuertas más complejas las cuales necesitaron en diversas ocasiones de la mezcla de las compuertas básicas antes mencionadas. Terminada la digitación del código el programa permitía su verificación por medio de la entrada de unos datos, comparando las salidas cerciorándonos así que la compuerta lógica quedo sin errores en la lógica. Después de esto se adjuntan los archivos con extensión ".hdl" al repositorio de colaboración grupal.
 
  La práctica inicia con la instalación y reconocimiento de las principales características de Nand2Tetris basados en la guía del proyecto 1, este es el cual es un conjunto de herramientas software, el cual nos ayuda a entender los elementos de arquitectura de computadores basada en el libro The Elements of Computing Systems, Building a Modern Computer from First escrito por Noam Nisan y Simon Schocken los cuales también son los creadores del software mencionado.
@@ -65,7 +65,9 @@ En conclusión, se pudo comprobar que basados en una sola compuerta primitiva co
 
 **Bibliografía**
 https://www.logicbus.com.mx/compuertas-logicas.php
+
 https://personales.unican.es/manzanom/planantiguo/edigitali/MUXG2.pdf
+
 Gutiérrez, J. M. R., Rudecino, M. S. B., Islas, M. N. O. B., & Gutiérrez, I. R. M. Circuitos Digitales.
 
 
