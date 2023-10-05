@@ -16,7 +16,7 @@ https://nelson09210921.github.io/Los_indestructibles.github.io/
 
 ##   **Practica 1**
 
-# **Familiarizandonos con la Herramienta Nand2Tetris y reforzando logica booleana**
+### **Familiarizándonos con la Herramienta Nand2Tetris y reforzando lógica booleana**
 
 El objetivo inicial del proyecto número 1 era generar las funciones necesarias para así dados una serie de datos de entrada se generará el comportamiento de las compuertas lógicas dadas (And, Or, Mux, etc.…). Para empezar, es necesario realizar el código de las compuertas más básicas, como lo son (And, Mux, Not, Or). Una vez realizadas estas funciones se proceden a usarse como base para el desarrollo de compuertas más complejas las cuales necesitaron en diversas ocasiones de la mezcla de las compuertas básicas antes mencionadas. Terminada la digitación del código el programa permitía su verificación por medio de la entrada de unos datos, comparando las salidas cerciorándonos así que la compuerta lógica quedo sin errores en la lógica. Después de esto se adjuntan los archivos con extensión ".hdl" al repositorio de colaboración grupal.
 
