@@ -151,6 +151,14 @@ Fill.asm: este programa es un script que ejecuta un bucle infinito para verifica
 
 El proyecto 5 arquitectura computacional, se desarrollo de la siguiente manera
 
+- Leer el capítulo 5 del libro "The Elements of Computing Systems" que explica los conceptos teóricos y las especificaciones de los chips que se deben construir¹.
+- Incluir las herramientas de simulación, las pruebas y los scripts necesarios para verificar el funcionamiento de los chips.
+- Usa el simulador de hardware para implementar la ALU siguiendo la especificación dada en el libro y en el archivo ALU.hdl. La ALU debe ser capaz de realizar 18 operaciones diferentes sobre dos entradas de 16 bits cada una y producir una salida de 16 bits y dos bits de estado.
+- Usa el simulador de hardware para implementar la memoria RAM siguiendo la especificación dada en el libro y en el archivo RAM.hdl. La RAM debe ser capaz de almacenar y recuperar datos de 16 bits en una dirección específica de 15 bits¹.
+- Usa el simulador de hardware para implementar el programa contador siguiendo la especificación dada en el libro y en el archivo PC.hdl. El PC debe ser capaz de incrementar, cargar o reiniciar su valor según las señales de control que recibe¹.
+- Usa el simulador de hardware para implementar el chip CPU siguiendo la especificación dada en el libro y en el archivo CPU.hdl. El CPU debe ser capaz de ejecutar instrucciones de máquina escritas en lenguaje ensamblador, usando la ALU, la RAM y el PC como componentes internos.
+- Verifica que los chips funcionan correctamente usando las pruebas y los scripts proporcionados por el software del curso.
+
 Introducción
 
 El diseño e implementación de la Unidad Aritmético-Lógica (ALU), que es un componente fundamental de un computador moderno. La ALU es el chip que realiza las operaciones aritméticas y lógicas sobre los datos que se procesan en el sistema. El código HDL para la ALU se basa en las especificaciones dadas en el libro "The Elements of Computing Systems", que forma parte del curso Nand2Tetris.
@@ -172,10 +180,16 @@ El código HDL para la ALU se puede dividir en las siguientes partes:
 
 Conclusiones 
 
+En este proyecto se logró implementar la arquitectura de un computador moderno usando solo elementos lógicos básicos. Se construyó la ALU, la RAM, el PC y el CPU que permiten ejecutar instrucciones de máquina escritas en lenguaje ensamblador. Se aprendió sobre los principios y los componentes fundamentales de un sistema computacional y se desarrollaron habilidades de diseño e implementación de hardware.
+
 El código HDL para la ALU, que es un chip que realiza las operaciones aritméticas y lógicas sobre los datos que se procesan en un computador moderno. Se explicó el diseño e implementación de la ALU usando elementos lógicos básicos como puertas NAND. Se mostró cómo la ALU recibe dos entradas de 16 bits cada una (x e y) y una entrada de 6 bits (zx, nx, zy, ny, f, no) que determinan la operación a realizar. Se mostró cómo la ALU produce una salida de 16 bits (out) y dos bits de estado (zr y ng) que indican si la salida es cero o negativa.
 
 Pr último, ¿Por qué el lenguaje de máquina es importante para definir la arquitectura computacional? 
 El lenguaje de máquina es importante para definir la arquitectura computacional porque es el lenguaje que la CPU puede entender y ejecutar directamente. La arquitectura computacional se refiere al diseño y la organización de los componentes de hardware y software de un sistema informático, como la CPU, la memoria, los buses, los dispositivos de entrada y salida, etc. El lenguaje de máquina determina las instrucciones que la CPU puede realizar, así como el formato y el significado de los datos que puede procesar. Cada arquitectura computacional tiene su propio lenguaje de máquina, que es específico y adaptado a sus características y capacidades. El lenguaje de máquina es el nivel más bajo de abstracción en la programación, lo que significa que es el más cercano al hardware y el más difícil de entender y escribir para los humanos. Por eso, se han desarrollado otros lenguajes de programación de más alto nivel, que son más fáciles de leer y escribir, pero que requieren ser traducidos al lenguaje de máquina para que la CPU pueda ejecutarlos. Estos lenguajes de programación se pueden clasificar en distintos niveles según su grado de abstracción y su similitud con el lenguaje natural. Algunos ejemplos son el ensamblador, el C, el Java, el Python, etc.
+
+Referencias
+
+"Nisan, N., & Schocken, S. (2005). The elements of computing systems: building a modern computer from first principles. MIT press."
 
 
 ## :notes: Trabajo Final:
