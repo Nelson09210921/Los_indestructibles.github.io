@@ -150,13 +150,12 @@ Mult.asm: este programa consta con tres memorias RAM R0, R1 y R2, donde los dos 
 Fill.asm: este programa es un script que ejecuta un bucle infinito para verificar la captura de datos del teclado, si fue presionada una tecla la pantalla se torna de color negro de lo contrario se ilumina.
 
 El proyecto 5 arquitectura computacional, se desarrollo de la siguiente manera
-# Implementación de la Unidad Aritmético-Lógica (ALU) usando elementos lógicos básicos
 
-## Introducción
+Introducción
 
 El diseño e implementación de la Unidad Aritmético-Lógica (ALU), que es un componente fundamental de un computador moderno. La ALU es el chip que realiza las operaciones aritméticas y lógicas sobre los datos que se procesan en el sistema. El código HDL para la ALU se basa en las especificaciones dadas en el libro "The Elements of Computing Systems", que forma parte del curso Nand2Tetris.
 
-## Metodología
+Metodología
 
 Para implementar la ALU, se usó el simulador de hardware provisto por el software del curso, que permite crear y probar chips usando un lenguaje de descripción de hardware (HDL). El HDL es un lenguaje que permite especificar la estructura y el comportamiento de un circuito electrónico usando puertas lógicas como elementos básicos. El simulador de hardware permite visualizar el funcionamiento de los chips y verificar que cumplen con las pruebas y los scripts proporcionados por el software del curso.
 
@@ -173,7 +172,7 @@ El código HDL para la ALU se puede dividir en las siguientes partes:
     - Tercero, se procesa la salida fOut según la señal de control no. Esta señal permite modificar la salida después de operar con ella. Si no es 1, se aplica la operación NOT a fOut; si no es 0, se deja igual a fOut. Para lograr esto, se usan los chips Not16 y Mux16. El resultado de este procesamiento se asigna a la salida out.
     - Cuarto, se verifica el valor de la salida out y se asignan los bits de estado zr y ng. Estos bits indican si la salida es cero o negativa. Para verificar si la salida es cero, se usa el chip Or8Way para aplicar la operación OR a cada mitad de la salida (8 bits cada una) y luego se usa el chip Or para aplicar la operación OR al resultado. Si el resultado final es 0, significa que todos los bits de la salida son 0; si el resultado final es 1, significa que al menos un bit de la salida es 1. Luego se usa el chip Not para invertir el resultado final y asignarlo al bit zr. Para verificar si la salida es negativa, se usa el chip And para aplicar la operación AND entre el valor true y el bit más significativo de la salida (el bit 15). Si el resultado es 1, significa que el bit más significativo es 1, lo que indica un número negativo en complemento a dos; si el resultado es 0, significa que el bit más significativo es 0, lo que indica un número positivo o cero en complemento a dos. El resultado se asigna al bit ng.
 
-## Conclusiones
+Conclusiones
 
 El código HDL para la ALU, que es un chip que realiza las operaciones aritméticas y lógicas sobre los datos que se procesan en un computador moderno. Se explicó el diseño e implementación de la ALU usando elementos lógicos básicos como puertas NAND. Se mostró cómo la ALU recibe dos entradas de 16 bits cada una (x e y) y una entrada de 6 bits (zx, nx, zy, ny, f, no) que determinan la operación a realizar. Se mostró cómo la ALU produce una salida de 16 bits (out) y dos bits de estado (zr y ng) que indican si la salida es cero o negativa.
 
