@@ -8,7 +8,11 @@
 
 https://nelson09210921.github.io/Los_indestructibles.github.io/
 
-## :speech_balloon: Practicas
+*[Practica 1](#Practica_1:_Familiarizandonos_con_la_Herramienta_Nand2Tetris_y_reforzando_logica_booleana)
+
+*[Practica 2](#Practica_2:_proyectos_2_y_3_demominados_Lógica_Aritmética_y_Lógica_secuencial_respectivamente)
+
+*[Practica 3](#Practica_3)
 
 ##   **Practica 1: Familiarizandonos con la Herramienta Nand2Tetris y reforzando logica booleana**
 El objetivo inicial del proyecto número 1 era generar las funciones necesarias para así dados una serie de datos de entrada se generará el comportamiento de las compuertas lógicas dadas (And, Or, Mux, etc.…). Para empezar, es necesario realizar el código de las compuertas más básicas, como lo son (And, Mux, Not, Or). Una vez realizadas estas funciones se proceden a usarse como base para el desarrollo de compuertas más complejas las cuales necesitaron en diversas ocasiones de la mezcla de las compuertas básicas antes mencionadas. Terminada la digitación del código el programa permitía su verificación por medio de la entrada de unos datos, comparando las salidas cerciorándonos así que la compuerta lógica quedo sin errores en la lógica. Después de esto se adjuntan los archivos con extensión ".hdl" al repositorio de colaboración grupal.
@@ -124,6 +128,30 @@ Se creó un lenguaje ensamblador específico para esta arquitectura de CPU. El l
 
 Implementación del Simulador
 El simulador de la CPU se implementó en el lenguaje de programación Java. El código del simulador es responsable de cargar programas escritos en lenguaje ensamblador, decodificar y ejecutar las instrucciones, y mostrar el estado de la CPU en cada paso.
+
+## **Practica 3**
+
+La practica 3 consistió en el desarrollaron los proyectos 4 y 5 de nand2tetris.
+
+Los objetivos del proyecto 4 Lenguaje de máquina, fueron
+
+•	Tener una experiencia práctica en programación de bajo nivel en lenguaje de máquina.
+
+•	Familiarizarnos con el conjunto de instrucciones Hack antes de construir la computadora Hack en el proyecto 5.
+
+•	Conocer el proceso de ensamblaje antes de construir un ensamblador en el proyecto 6. 
+
+Se uso la plataforma Hack para la creación de un programa que desarrolle operaciones de multiplicación en el lenguaje de máquina, teniendo en cuenta que esta no es una operación primitiva de la plataforma mientras que la suma si lo es, por tanto, se debe implementar usando la suma.
+
+La finalidad de este proyecto fue almacenar el producto de dos números, RAM 0 y RAM 1 en el espacio de memoria R2, para completar el proyecto se editaron los archivos Mult.asm y Fill.asm usando el ensamblador Hack y cargándolo posteriormente los archivos Mult.hack y Fill.hack creados por el ensamblador en el emulador CPU.
+
+Mult.asm: este programa consta con tres memorias RAM R0, R1 y R2, donde los dos primeros es donde se almacenan los nueros a multiplicar y R2 es el resultado de la multiplicación, estos números se multiplican realizando sumas repetitivas en un ciclo.
+
+Fill.asm: este programa es un script que ejecuta un bucle infinito para verificar la captura de datos del teclado, si fue presionada una tecla la pantalla se torna de color negro de lo contrario se ilumina.
+
+Pr último, ¿Por qué el lenguaje de máquina es importante para definir la arquitectura computacional? 
+El lenguaje de máquina es importante para definir la arquitectura computacional porque es el lenguaje que la CPU puede entender y ejecutar directamente. La arquitectura computacional se refiere al diseño y la organización de los componentes de hardware y software de un sistema informático, como la CPU, la memoria, los buses, los dispositivos de entrada y salida, etc. El lenguaje de máquina determina las instrucciones que la CPU puede realizar, así como el formato y el significado de los datos que puede procesar. Cada arquitectura computacional tiene su propio lenguaje de máquina, que es específico y adaptado a sus características y capacidades. El lenguaje de máquina es el nivel más bajo de abstracción en la programación, lo que significa que es el más cercano al hardware y el más difícil de entender y escribir para los humanos. Por eso, se han desarrollado otros lenguajes de programación de más alto nivel, que son más fáciles de leer y escribir, pero que requieren ser traducidos al lenguaje de máquina para que la CPU pueda ejecutarlos. Estos lenguajes de programación se pueden clasificar en distintos niveles según su grado de abstracción y su similitud con el lenguaje natural. Algunos ejemplos son el ensamblador, el C, el Java, el Python, etc.
+
 
 ## :notes: Trabajo Final:
 
