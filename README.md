@@ -8,11 +8,11 @@
 
 https://nelson09210921.github.io/Los_indestructibles.github.io/
 
-*[#Practica 1](#Practica_1)
+*[#Practica 1](##Practica_1)
 
-*[Practica 2](#Practica_2)
+*[Practica 2](##Practica_2)
 
-*[Practica 3](#Practica_3)
+*[Practica 3](##Practica_3)
 
 ##   **Practica 1**
 
@@ -78,7 +78,9 @@ https://personales.unican.es/manzanom/planantiguo/edigitali/MUXG2.pdf
 
 Gutiérrez, J. M. R., Rudecino, M. S. B., Islas, M. N. O. B., & Gutiérrez, I. R. M. Circuitos Digitales.
 
-##   **Practica 2: proyectos 2 y 3 demominados Lógica Aritmética y Lógica secuencial respectivamente**
+##   **Practica 2**
+
+###**Lógica Aritmética y Lógica secuencial respectivamente**
 
 El proyecto 2 de nand2tetris consistio en construir una serie de chips que permiten realizar operaciones aritméticas y lógicas con números binarios. El objetivo final es crear una Unidad Aritmética Lógica (ALU), que es el componente central de la CPU de una computadora.
 
@@ -133,6 +135,7 @@ Implementación del Simulador
 El simulador de la CPU se implementó en el lenguaje de programación Java. El código del simulador es responsable de cargar programas escritos en lenguaje ensamblador, decodificar y ejecutar las instrucciones, y mostrar el estado de la CPU en cada paso.
 
 ## **Practica 3**
+###**Lenguaje de máquina y arquitectura computacional**
 
 La practica 3 consistió en el desarrollaron los proyectos 4 y 5 de nand2tetris.
 
