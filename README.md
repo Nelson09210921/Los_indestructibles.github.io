@@ -8,12 +8,6 @@
 
 https://nelson09210921.github.io/Los_indestructibles.github.io/
 
-*[#Practica 1](##Practica_1)
-
-*[Practica 2](##Practica_2)
-
-*[Practica 3](##Practica_3)
-
 ##   **Practica 1**
 
 ### **Familiarizándonos con la Herramienta Nand2Tetris y reforzando lógica booleana**
