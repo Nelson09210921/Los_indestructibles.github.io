@@ -8,7 +8,7 @@
 
 https://nelson09210921.github.io/Los_indestructibles.github.io/
 
-*[Practica 1](#Practica_1)
+*[#Practica 1](#Practica_1)
 
 *[Practica 2](#Practica_2)
 
