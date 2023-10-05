@@ -8,7 +8,7 @@
 
 https://nelson09210921.github.io/Los_indestructibles.github.io/
 
-*[Practica 1](#Practica_1:_Familiarizandonos_con_la_Herramienta_Nand2Tetris_y_reforzando_logica_booleana)
+*[Practica 1](#Practica_1)
 
 *[Practica 2](#Practica_2:_proyectos_2_y_3_demominados_Lógica_Aritmética_y_Lógica_secuencial_respectivamente)
 
