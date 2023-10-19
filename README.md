@@ -191,6 +191,25 @@ Referencias
 
 "Nisan, N., & Schocken, S. (2005). The elements of computing systems: building a modern computer from first principles. MIT press."
 
+## Práctica 4
+### **Asambler**
+
+Para el desarrollo de la practica 4 nos basamos en el proyecto 6 de nan2tetris, donde el objetivo principal es construir un ensamblador que traduzca programas escritos en lenguaje ensamblador Hack (un lenguaje de bajo nivel diseñado para el curso) en código binario que pueda ser ejecutado en la arquitectura Hack.
+
+ASS.asm es la suma de dos constantes poniendo el resultado en R0.
+
+Max.asm Calcula el máximo de dos números los cuales van a ser ingresados en R0 y R1 poniendo el resultado en R2.
+
+Rect.asm dibuja un rectángulo en la parte superior izquierda de la pantalla con dimensiones de 16px de ancho y R0px de alto.
+
+Pong.asm juego simbólico sin etiquetas diseñado por un ensamblador usando lenguaje Hack y el compilador se encarga de traducirlo al ensamblador correspondiente, este juego consiste el rebote de una pelota de lado a lado donde el usuario debe tocarla con una barra y no dejarla caer , cada que la pelota golpea la barra esta se encoge haciendo mas emocionante el juego, el juego termina dejando caer la pelota u oprimiendo esc, este tiende a ser lento al ser ejecutado por un emulador de CPU.
+
+¿Cuál es la principal limitante que observan?
+
+El ensamblador es una herramienta esencial en el desarrollo de software a bajo nivel dado que este se ubica en una posición extremadamente baja en la jerarquía de lenguajes de programación, es crucial considerar las restricciones asociadas con su empleo. Estas incluyen la necesidad de comprender y aplicar con precisión las reglas gramaticales del lenguaje Hack, así como la conversión de estructuras de alto nivel a instrucciones de bajo nivel en la máquina virtual de UBM, lo que requiere una comprensión profunda de la semántica del lenguaje y las operaciones de la máquina subyacente. Aunque el ensamblador posee un gran poder para la programación a nivel de sistema y puede optimizar el rendimiento en plataformas específicas, su carencia de portabilidad y falta de abstracción hacen que sea menos adecuado para aplicaciones de software que necesitan ejecutarse en diversos entornos o que demandan un desarrollo rápido y un mantenimiento sencillo.
+
+
+
 
 ## :notes: Trabajo Final:
 
