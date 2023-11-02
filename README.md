@@ -222,6 +222,7 @@ El traductor toma como entrada un archivo con código en lenguaje VM y genera un
 Se divide en dos etapas principales:
 
 Etapa I: Manejo de comandos aritméticos de pila
+
 La Etapa I del Proyecto 07 de Nand2Tetris se centra en el manejo de comandos aritméticos de pila. En esta etapa, el traductor VM debe implementar los nueve comandos aritméticos/lógicos del lenguaje VM, así como el comando VM push constant x.
 Comandos Aritméticos/Lógicos
 Los nueve comandos aritméticos/lógicos que debes implementar son: add, sub, neg, eq, gt, lt, and, or y not. Cada uno de estos comandos opera en los valores en la parte superior de la pila.
@@ -246,6 +247,7 @@ Por ejemplo, el comando VM push local 0 empuja el valor del primer índice del s
 Implementación
 
 Para implementar estos comandos, el traductor VM debe generar código Hack que realice las operaciones correspondientes en los segmentos de memoria. Esto implica manipular los registros y la memoria del lenguaje ensamblador Hack para replicar el comportamiento de una máquina virtual basada en una pila.
+
 Resultados 
 
 Al finalizar el proyecto, el traductor es capaz de convertir correctamente el código en lenguaje VM a código en lenguaje Hack. Esto permite ejecutar programas escritos en lenguaje VM en la plataforma Hack.
