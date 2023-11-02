@@ -215,9 +215,12 @@ El ensamblador es una herramienta esencial en el desarrollo de software a bajo n
 Para el desarrollo de la practica 5 nos basamos en loa proyectos 7 y 8 de nan2tetris, los cuales consisten en la construcción de una máquina virtual (VM) y su traductor, Aritmética de pila y Control de programa respectivamente.
 
 El objetivo principal  es construir un traductor de Máquina Virtual (VM) a Hack. Este traductor debe ajustarse a la Especificación VM, Parte I (sección 7.2 del libro) y al Mapeo Estándar VM-on-Hack, Parte I (sección 7.3.1 del libro).
+
 Funcionamiento
+
 El traductor toma como entrada un archivo con código en lenguaje VM y genera un archivo de salida con el código equivalente en lenguaje Hack. El archivo de salida se denomina fileName.asm y se almacena en el mismo directorio que el archivo de entrada.
 Se divide en dos etapas principales:
+
 Etapa I: Manejo de comandos aritméticos de pila
 La Etapa I del Proyecto 07 de Nand2Tetris se centra en el manejo de comandos aritméticos de pila. En esta etapa, el traductor VM debe implementar los nueve comandos aritméticos/lógicos del lenguaje VM, así como el comando VM push constant x.
 Comandos Aritméticos/Lógicos
@@ -225,18 +228,26 @@ Los nueve comandos aritméticos/lógicos que debes implementar son: add, sub, ne
 Por ejemplo, el comando add toma los dos valores superiores de la pila, los suma y empuja el resultado a la pila. El comando neg toma el valor superior de la pila, lo niega (es decir, lo multiplica por -1) y empuja el resultado a la pila.
 Comando VM push constant x
 El comando VM push constant x empuja una constante x a la pila. El código VM contiene la línea push constant 7, tu traductor VM debe generar código Hack que empuje el número 7 a la pila.
+
 Implementación
+
 Para implementar estos comandos, el traductor VM debe generar código Hack que realice las operaciones correspondientes en la pila. Esto implica manipular los registros y la memoria del lenguaje ensamblador Hack para replicar el comportamiento de una máquina virtual basada en una pila.
+
 Etapa II: Implementación de comandos de operación de segmento de memoria
+
 Segmentos de Memoria
+
 Los segmentos de memoria en la Máquina Virtual (VM) incluyen local, argument, this, that, constant, static, pointer, y temp. Cada uno de estos segmentos tiene un propósito específico y una ubicación específica en la memoria.
 Por ejemplo, el segmento local se utiliza para almacenar variables locales en una función, mientras que el segmento argument se utiliza para pasar argumentos a una función. El segmento constant se utiliza para empujar constantes a la pila, y el segmento static se utiliza para almacenar variables estáticas que persisten entre las llamadas a las funciones.
 Comandos push y pop
 Los comandos push y pop se utilizan para manipular los datos en los segmentos de memoria. El comando push segment index empuja el valor del segmento especificado en el índice especificado a la parte superior de la pila. Por otro lado, el comando pop segment index saca el valor superior de la pila y lo almacena en el segmento especificado en el índice especificado.
 Por ejemplo, el comando VM push local 0 empuja el valor del primer índice del segmento local a la pila. El comando VM pop argument 1 saca el valor superior de la pila y lo almacena en el segundo índice del segmento argument.
+
 Implementación
+
 Para implementar estos comandos, el traductor VM debe generar código Hack que realice las operaciones correspondientes en los segmentos de memoria. Esto implica manipular los registros y la memoria del lenguaje ensamblador Hack para replicar el comportamiento de una máquina virtual basada en una pila.
 Resultados 
+
 Al finalizar el proyecto, el traductor es capaz de convertir correctamente el código en lenguaje VM a código en lenguaje Hack. Esto permite ejecutar programas escritos en lenguaje VM en la plataforma Hack.
 
 Teniendo en cuenta el marco de estas dos prácticas que son las máquinas virtuales. ¿Cuál cree que es el futuro de las máquinas virtuales?
