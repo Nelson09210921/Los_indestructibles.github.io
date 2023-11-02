@@ -209,6 +209,16 @@ Pong.asm juego simbólico sin etiquetas diseñado por un ensamblador usando leng
 El ensamblador es una herramienta esencial en el desarrollo de software a bajo nivel dado que este se ubica en una posición extremadamente baja en la jerarquía de lenguajes de programación, es crucial considerar las restricciones asociadas con su empleo. Estas incluyen la necesidad de comprender y aplicar con precisión las reglas gramaticales del lenguaje Hack, así como la conversión de estructuras de alto nivel a instrucciones de bajo nivel en la máquina virtual de UBM, lo que requiere una comprensión profunda de la semántica del lenguaje y las operaciones de la máquina subyacente. Aunque el ensamblador posee un gran poder para la programación a nivel de sistema y puede optimizar el rendimiento en plataformas específicas, su carencia de portabilidad y falta de abstracción hacen que sea menos adecuado para aplicaciones de software que necesitan ejecutarse en diversos entornos o que demandan un desarrollo rápido y un mantenimiento sencillo.
 
 
+## Práctica 5
+### **Maquina virtual, Aritmética de pila y Control de programa**
+
+Para el desarrollo de la practica 5 nos basamos en loa proyectos 7 y 8 de nan2tetris, los cuales consisten en la construcción de una máquina virtual (VM) y su traductor, Aritmética de pila y Control de programa respectivamente.
+
+
+Teniendo en cuenta el marco de estas dos prácticas que son las máquinas virtuales. ¿Cuál cree que es el futuro de las máquinas virtuales?
+El futuro de las máquinas virtuales es prometedor y continuará evolucionando en varias direcciones. Las prácticas 7 y 8 del curso de nand2tetris brindan una comprensión fundamental de cómo funcionan las máquinas virtuales a un nivel más básico. Sin embargo, el panorama actual de las máquinas virtuales va mucho más allá, este apunta hacia apunta hacia la continua mejora de la eficiencia, el rendimiento, la seguridad y la integración con tecnologías emergentes, como contenedores y la nube. Es probable que veamos una evolución constante en la forma en que se utilizan y se integran en los sistemas informáticos, con un enfoque en la optimización y la flexibilidad.
+
+
 
 
 ## :notes: Trabajo Final:
