@@ -1,13 +1,3 @@
-# File: VMTranslator.py
-# -----
-# Author: Ihsan TOPALOGLU (itopaloglu83@gmail.com)
-# Date: 31 May 2020
-# Course: Nand to Tetris, Part 2
-# Project: 8
-#
-# Summary: Virtual Machine Translator that takes a .vm file and creates a .asm file.
-#
-
 import os
 import sys
 
