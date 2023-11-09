@@ -1,0 +1,218 @@
+class SnakeGame {
+
+    // La serpiente
+    field Snake snake;
+
+    // Espacio de juego
+    field SnakeGrid grid;
+
+    // puntuacion
+    field int score;
+
+    // nivel
+    field int level;
+
+    // si el juego es pausado
+    field boolean paused;
+
+    // ciclo de juego
+    field int cycle;
+
+    // cuanto espera entre ciclos
+    field int delay;
+
+    // crea un nuevo juego de la serpiente
+    constructor SnakeGame new() {
+
+        
+        do Random.setSeed(RandSeed.getSeed());
+
+        // inicia 
+        let score = 0;
+        let level = 1;
+        let paused = false;
+        let cycle = 0;
+        let delay = 100;
+
+        // crea el grid
+        let grid = SnakeGrid.new(this, 512, 256);
+
+        // create the snake
+        let snake = Snake.new(this, grid.sizeX() / 2, grid.sizeY() / 2, 10, 3);
+
+        do grid.placeFood();
+        do grid.drawStatus();
+
+        return this;
+
+    }
+
+   
+    method void dispose() {
+
+        do snake.dispose();
+        do grid.dispose();
+        do Memory.deAlloc(this);
+
+        return;
+
+    }
+
+    // corre el juego
+    method void run() {
+
+        var boolean broken;
+        var boolean exit;
+        var int key;
+
+        // ciclo hasta exit
+        let exit = false;
+        while(~exit) {
+
+            do snake.rememberDir();
+
+            // juego pausado
+            if( paused ) {
+                let broken = false;
+                while(~broken) {
+                    let key = 0;
+                    while(~key) {
+                        let key = Keyboard.keyPressed();
+                    }
+                    if( key = 80 ) {
+                        // p
+                        let broken = true;
+                        let paused = false;
+                    }
+                    if( key = 81 ) {
+                        // q
+                        let broken = true;
+                        let exit = true;
+                    }
+                    do grid.drawStatus();
+                    do Sys.wait(delay);
+                }
+            }
+
+            // despausado
+            let key = Keyboard.keyPressed();
+            if( key = 80 ) {
+                // p
+                let paused = true;
+            }
+            if( key = 81 ) {
+                // q
+                let exit = true;
+            }
+            if( key = 130 ) {
+                
+                if( snake.getLastDir() = 1 ) {
+                    do snake.setDir(3);
+                }
+                if( snake.getLastDir() = 2 ) {
+                    do snake.setDir(3);
+                }
+            }
+            if( key = 131 ) {
+                // flecha arriba
+                if( snake.getLastDir() = 3 ) {
+                    do snake.setDir(1);
+                }
+                if( snake.getLastDir() = 4 ) {
+                    do snake.setDir(1);
+                }
+            }
+            if( key = 132 ) {
+                // flecha arriba
+                if( snake.getLastDir() = 1 ) {
+                    do snake.setDir(4);
+                }
+                if( snake.getLastDir() = 2 ) {
+                    do snake.setDir(4);
+                }
+            }
+            if( key = 133 ) {
+                // flecha arriba
+                if( snake.getLastDir() = 3 ) {
+                    do snake.setDir(2);
+                }
+                if( snake.getLastDir() = 4 ) {
+                    do snake.setDir(2);
+                }
+            }
+
+            // se mueve en la direccion actual
+            if( ~ snake.tryMove() ) {
+                do grid.drawCrashed();
+                do Sys.halt();
+            }
+
+            // si ha comido 
+            if( grid.checkFood(snake.posX(), snake.posY()) ) {
+                do snake.eatFood();
+                do nextLevel();
+                do grid.placeFood();
+            }
+
+            // hace la serpiente crecer
+            do snake.grow(cycle);
+
+            // redibuja la comida
+            do grid.drawFood();
+            do grid.drawStatus();
+            do Sys.wait(delay);
+            do nextCycle();
+
+            // revisa historia de la serpiente
+            if( snake.checkRewriteHistory() ) {
+                let cycle = snake.getLength();
+            }
+
+        }
+
+        do grid.drawDone();
+        do Sys.halt();
+
+        return;
+
+    }
+
+    // sube de nivel
+    method void nextLevel() {
+
+        let score = score + (10 * level);
+        let level = level + 1;
+        if( delay > 30 ) {
+            let delay = delay - 5;
+        }
+
+        return;
+    }
+
+    //incrementa el ciclo
+    method int nextCycle() {
+        let cycle = cycle + 1;
+        return cycle;
+    }
+
+    
+    method SnakeGrid getGrid() {
+        return grid;
+    }
+    method Snake getSnake() {
+        return snake;
+    }
+    method int getCycle() {
+        return cycle;
+    }
+    method int getScore() {
+        return score;
+    }
+    method int getLevel() {
+        return level;
+    }
+    method int getPaused() {
+        return paused;
+    }
+
+}
