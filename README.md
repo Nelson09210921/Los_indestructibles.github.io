@@ -331,8 +331,6 @@ Al final llama los métodos para obtener la información sobre el juego
 Proponer un nuevo lenguaje de programación requiere un equilibrio cuidadoso entre la simplicidad, la eficiencia, la seguridad y la compatibilidad con las arquitecturas de hardware modernas. Además, la existencia de herramientas de desarrollo sólidas, una comunidad activa y recursos educativos puede contribuir significativamente al éxito del nuevo lenguaje.
 Se debe considerar la claridad y simplicidad ya que este debe ser claro y fácil de entender facilitando la escritura u mantenimiento del código, la eficiencia de tal manera que se pueda aprovechar al máximo los recursos del hardware proporcionando un rendimiento optimo, la portabilidad, debido a que si el consumo y los requisitos para la ejecución en las maquinas son excesivos o muy altos se va a complicar la difusión ya que se vería limitado a las características específicas de ciertas maquinas, la seguridad especialmente en entornos donde la manipulación incorrecta de la memoria puede llevar a vulnerabilidades, disponibilidad de documentación y recursos educativos ya que esto facilita la adopción del lenguaje.
 
-
-
 ## :notes: Trabajo Final:
 
 
