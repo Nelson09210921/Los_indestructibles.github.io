@@ -255,6 +255,81 @@ Al finalizar el proyecto, el traductor es capaz de convertir correctamente el c�
 Teniendo en cuenta el marco de estas dos prácticas que son las máquinas virtuales. ¿Cuál cree que es el futuro de las máquinas virtuales?
 El futuro de las máquinas virtuales es prometedor y continuará evolucionando en varias direcciones. Las prácticas 7 y 8 del curso de nand2tetris brindan una comprensión fundamental de cómo funcionan las máquinas virtuales a un nivel más básico. Sin embargo, el panorama actual de las máquinas virtuales va mucho más allá, este apunta hacia apunta hacia la continua mejora de la eficiencia, el rendimiento, la seguridad y la integración con tecnologías emergentes, como contenedores y la nube. Es probable que veamos una evolución constante en la forma en que se utilizan y se integran en los sistemas informáticos, con un enfoque en la optimización y la flexibilidad.
 
+## Práctica 6
+###**Lenguaje de alto nivel**
+
+Esta práctica tiene como objetivo crear una comprensión integral de la computación desde el nivel mas bajo de hardware hasta el nivel más alto de software, a través de la construcción progresiva de una computadora completa y un juego funcional.
+
+Es un proyecto que representa un paso crucial a la construcción de una computadora completa, el cual busca establecer un puente entre el lenguaje de programación de alto nivel con el lenguaje de máquina de bajo nivel a través del diseño e implementación de un compilador básico traduciendo programas escritos en lenguaje de alto nivel jack a código de ensamblado que la computadora pueda ejecutar lo cual implica un entendimiento de los principios de análisis léxico, sintáctico y  generación de código así, como la capacidad de optimización de los programas resultantes, además, Además, te familiarizarás con el arte de escribir un programa que combina gráficos, animación e interacción del usuario, una habilidad útil en sí misma.
+
+Se adquiere una apreciación de la interacción entre el software y hardware acercándonos al conocimiento del funcionamiento de una computadora a través de componentes básicos.
+
+Para la ejecución de esta practica se desarrollo a partir de 6 clases las cuales se implementaron para la creación del juego de la culebrita (Snake).
+
+La cuadrícula del juego de la Serpiente. 
+La pantalla de jack tiene dimensiones de 512x256 píxeles, pero un solo píxel es demasiado pequeño para que el usuario lo controle, así que utilizamos bloques de 4x4 píxeles, convirtiendo la pantalla en una cuadrícula de 128x64. 
+También necesitamos una línea de estado. 
+La pantalla de jack puede tener 23x64 caracteres de texto, por lo que cada línea ocupa un poco más de 11 píxeles. 
+Reservamos los 16 píxeles inferiores, dejando 512x240 para el uso del juego.
+
+1)	Main.jack
+Esta clase crea una instancia del juego representado por la clase ‘SnakeGame’, lo ejecuta y luego libera los recursos antes de terminar, dentro de este se realizan las siguientes acciones:
+a)	Se declaran la variable ‘game’ que almacena una instancia de la clase ‘SnakeGame’ de tipo ‘SnakeGame’.
+b)	Se utiliza ‘let game = SnakeGame.new();’ para crear una nueva instancia de la clase ‘SnakeGame’ y asignarla a la variable ‘game’. La función ‘new()’ generalmente se utiliza para inicializar una nueva instancia de una clase.
+c)	Se llama al método ‘run’ de la instancia ‘game’ utilizando ‘do game.run();’. Ya que la clase SnakeGame tiene un método llamado ‘run’ que inicia la ejecución del juego.
+d)	Se llama al método ‘dispose’ de la instancia ‘game’ utilizando ‘do game.dispose();’. Ya que la clase’ SnakeGame’ tiene un método llamado ‘dispose’ que se utiliza para liberar los recursos utilizados por el juego.
+i)	Finalmente, la función se completa con ‘return;’.
+
+2)	RandSeed.jack
+Está diseñada para generar una semilla (seed) aleatoria basada en la entrada del teclado, dentro de este se realizan las siguientes acciones: 
+a)	Se declaran dos variables enteras, ‘seed’ y ‘key’, que se utilizarán para almacenar la semilla aleatoria y el estado de la tecla presionada.
+b)	Las variables ‘seed’ y ‘key’ se inicializan a cero utilizando ‘let seed = 0;’ y’ let key = 0;’
+c)	Se imprime en la consola el mensaje "press a key to start" para indicar al usuario que debe presionar una tecla para comenzar.
+d)	Se utiliza un bucle ‘while’ que se ejecuta mientras no se haya presionado ninguna tecla (~key significa not(key)). Dentro del bucle:
+i)	Se incrementa la variable ‘seed’ en uno en cada iteración.
+ii)	Se verifica si ‘seed’ alcanza el valor máximo (32767). Si es así, se reinicia ‘seed’ a cero.
+iii)	Se obtiene el estado de la tecla presionada utilizando ‘let key = Keyboard.keyPressed()’.
+e)	Después de salir del bucle de entrada de teclado, se limpia la pantalla utilizando ‘do Screen.clearScreen()’.
+f)	La función devuelve la semilla generada mediante ‘return seed’.
+
+3)	Random.jack
+Es una implementación básica de un generador de números pseudoaleatorios. dentro de este se realizan las siguientes acciones: 
+a)	La clase tiene una variable estática ‘seed’, que es compartida por todas las instancias de la clase y se utiliza como semilla para el generador de números aleatorios.
+b)	‘Función setSeed’ permite establecer la semilla del generador de números aleatorios.
+c)	‘Función rand’ genera un número aleatorio entre 0 y 32767 utilizando la fórmula ‘let seed = seed + 20251’. Luego, verifica si ‘seed’ es negativo y, en caso afirmativo, ajusta su valor.
+d)	‘Función randRange’ genera un número aleatorio dentro de un rango específico utilizando una máscara. La máscara se calcula para asegurarse de que sea lo suficientemente grande para cubrir todo el rango deseado. Luego, genera un número aleatorio y lo aplica a la máscara. Se repite este proceso hasta que se obtiene un número dentro del rango deseado.
+
+
+4)	Snake.jack
+Es una implementación de la entidad "serpiente" para el juego de la culebrita (Snake) en el entorno llamado SnakeGame. Tiene campos para almacenar información sobre la posición, longitud, dirección y otros aspectos de la serpiente como el largo, que tanto crece, cuanto ha crecido, historial de movimiento.
+a)	‘constructor Snake’ crea una nueva serpiente a partir de los parámetros establecidos, el bucle ‘while’ se utiliza para dibujar la serpiente inicialmente en la pantalla. En cada iteración, se incrementa la posición en el eje X, se dibuja la cabeza de la serpiente, se incrementa el contador’ i’ y se avanza al siguiente ciclo del juego.
+b)	‘method void dispose()’ ubica la serpiente.
+c)	‘method void rewriteHistory()’ re escribe el historial de movimientos 
+d)	‘method boolean tryMove()’ ubica la dirección actual
+e)	‘method void clearTail(int cycle)’ limpia la cola
+f)	‘method void eatFood()’ la serpiente come.
+
+5)	SnakeGrid.jack
+Representa el espacio de juego en el que la serpiente se mueve.
+a)	‘constructor SnakeGrid’ Se construye la clase donde se inicializa el espacio del juego
+b)	‘method void dispose()’ Se liberan los recursos para finalizar el juego
+c)	‘method void placeFood()’ Se coloca la comida de forma aleatoria donde no este la serpiente 
+d)	‘method void drawFood()’ Se dibuja la comida en la pantalla
+e)	‘method void initGrid()’ Se inicializa el espacio de juego
+f)	Métodos para obtener la información sobre el espacio de juego
+g)	Métodos para acceder al gid
+h)	Método para depurar y dibujar información sobre el juego en la pantalla 
+
+6)	SnakeGame.jack
+Es una implementación completa de un juego de la serpiente en el lenguaje utilizado, con manejo de entrada del usuario, lógica de juego y actualización de la interfaz gráfica. Tiene campos para almacenar información como la serpiente, el espacio de juego, la puntuación, nivel, estado de pausa, ciclo de juego, retardo entre ciclos.
+a)	‘method void run()’ es el método principal para ejecuta el juego, tiene ciclos hasta que el jugador decida salir, pausar, despausar, ir arriba, abajo, derecha, izquierda, si ha comido, el crecimiento de la serpiente, el nivel
+Al final llama los métodos para obtener la información sobre el juego  
+
+
+¿Qué se debe considerar para proponer un nuevo y buen lenguaje de programación, teniendo en cuenta la arquitectura de computador completa? 
+
+Proponer un nuevo lenguaje de programación requiere un equilibrio cuidadoso entre la simplicidad, la eficiencia, la seguridad y la compatibilidad con las arquitecturas de hardware modernas. Además, la existencia de herramientas de desarrollo sólidas, una comunidad activa y recursos educativos puede contribuir significativamente al éxito del nuevo lenguaje.
+Se debe considerar la claridad y simplicidad ya que este debe ser claro y fácil de entender facilitando la escritura u mantenimiento del código, la eficiencia de tal manera que se pueda aprovechar al máximo los recursos del hardware proporcionando un rendimiento optimo, la portabilidad, debido a que si el consumo y los requisitos para la ejecución en las maquinas son excesivos o muy altos se va a complicar la difusión ya que se vería limitado a las características específicas de ciertas maquinas, la seguridad especialmente en entornos donde la manipulación incorrecta de la memoria puede llevar a vulnerabilidades, disponibilidad de documentación y recursos educativos ya que esto facilita la adopción del lenguaje.
 
 
 
