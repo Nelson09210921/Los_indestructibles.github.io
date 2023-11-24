@@ -336,6 +336,7 @@ Se debe considerar la claridad y simplicidad ya que este debe ser claro y fácil
 ### **Codigo ACM** 
 
 Nelson Andres Barboza Landinez (2202008): https://www.youtube.com/watch?v=LM2K27ooYMw&t=41s
+Nery Karolina Aponte Barajas (2202021): https://youtu.be/nN-VE99ht0A
 
 ## :notes: Trabajo Final:
 
