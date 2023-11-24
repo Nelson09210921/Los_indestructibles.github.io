@@ -340,9 +340,12 @@ Nelson Andres Barboza Landinez (2202008): https://www.youtube.com/watch?v=LM2K27
 Nery Karolina Aponte Barajas (2202021): https://youtu.be/nN-VE99ht0A
 
 Carlos Alejandro Amaya Cepeda (2202011): https://youtu.be/g_oVaGeFqZM
-## :notes: Trabajo Final:
 
 Gabriel Antonio Chavarro Avellaneda (2152675): https://www.youtube.com/watch?v=kO4Dlt8sWos
+
+## :notes: Trabajo Final:
+
+
 
 
 
