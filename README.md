@@ -345,6 +345,8 @@ Gabriel Antonio Chavarro Avellaneda (2152675): https://www.youtube.com/watch?v=k
 
 ## :notes: Trabajo Final:
 
+Video explicativo proyecto final
+https://youtu.be/6aUHzsoZ8mU?si=xOZ8_ovyUq7TTZr8
 
 
 
