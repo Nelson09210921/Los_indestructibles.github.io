@@ -345,6 +345,10 @@ Gabriel Antonio Chavarro Avellaneda (2152675): https://www.youtube.com/watch?v=k
 
 ## :notes: Trabajo Final:
 
+Video explicativo proyecto 
+Revitalizando la Computación de Alto Rendimiento: Una Nueva Era para la Universidad Industrial de Santander
+https://youtu.be/6aUHzsoZ8mU?si=xOZ8_ovyUq7TTZr8
+
 
 
 
